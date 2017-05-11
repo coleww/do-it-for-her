@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta name="description" content="">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="public/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <canvas id="doItForHer" width="680" height="486"></canvas>
+    </div>
+    
+    <div class="hide">
+      <canvas id="hidden" width="680" height="486"></canvas>
+    </div>
+    
+    
+    <div class="toolbar">
+      
+      <h1>
+        DO IT FOR HER
+      </h1>
+      <div>
+        click to upload images
+        <br/>
+        drag and drop to re-order 
+      </div>
+      <input type="file" id="upload" multiple="true" style="display: none;" />
+<!--    TODO: move this onclick into JS    -->
+      <input type="button" value="upload" onclick="document.getElementById('upload').click();" />
+      <button class="download">download</button>
+      <br/>
+      <ul id="sortable">
+      </ul>
+      
+    </div>
+    
+    <img src="https://cdn.glitch.com/5060b8b9-3775-477c-ad08-f5a71270b612%2Fe45.png?1492479272380" style="display: none;" class="template"/>
+    
+    
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="vendor/canvas-toBlob.js"></script>
+    <script src="vendor/filesaver.js"></script>
+    <script src="public/client.js"></script>
+
+  </body>
+</html>
